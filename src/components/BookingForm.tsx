@@ -80,7 +80,7 @@ export const BookingSection: React.FC = () => {
             </div>
             
             <div className="hidden lg:block">
-              <p className="text-[10px] opacity-70">© 2024 Mominjon Raximov. Barcha huquqlar himoyalangan.</p>
+              <p className="text-[10px] opacity-70">© 2024 Raximov Moʻminjon. Barcha huquqlar himoyalangan.</p>
             </div>
           </div>
 

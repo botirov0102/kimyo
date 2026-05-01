@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowDown, FlaskConical, Atom, Beaker, Sparkles, ChevronRight } from 'lucide-react';
 import { cn } from '../lib/utils';
-import heroPortrait from '../assets/images/input_file_0.png';
 
 export const HeroSection: React.FC = () => {
   const { scrollY } = useScroll();
@@ -99,8 +98,8 @@ export const HeroSection: React.FC = () => {
             <div className="relative">
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white/50 backdrop-blur-sm">
                 <img 
-                  src={heroPortrait} 
-                  alt="Mominjon Raximov Portrait" 
+                  src="/hero-portrait.png" 
+                  alt="Raximov Moʻminjon Portrait" 
                   className="w-full h-auto object-contain grayscale-[10%] hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -117,7 +116,7 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wide">Yil o'qituvchisi</div>
-                  <div className="text-xs md:text-sm font-bold text-slate-900">Mominjon Raximov</div>
+                  <div className="text-xs md:text-sm font-bold text-slate-900">Raximov Moʻminjon</div>
                 </div>
               </motion.div>
 

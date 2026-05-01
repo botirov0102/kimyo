@@ -50,7 +50,7 @@ export default function App() {
         <div className="container mx-auto px-4 flex justify-between items-center text-slate-900">
           <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-500 rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-brand-500/30 group-hover:rotate-12 transition-transform">M</div>
-            <span className="text-lg md:text-xl font-display font-bold tracking-tight">Mominjon Raximov</span>
+            <span className="text-lg md:text-xl font-display font-bold tracking-tight">Raximov Moʻminjon</span>
           </div>
           
           {/* Desktop Links */}

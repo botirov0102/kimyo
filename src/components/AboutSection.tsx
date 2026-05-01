@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { GraduationCap, Users, Clock, Award, BookOpen, Microscope, FlaskConical, Atom } from 'lucide-react';
 import { cn } from '../lib/utils';
-import aboutImage from '../assets/images/regenerated_image_1777635809394.png';
 
 const STATS = [
   { label: 'Yillik tajriba', value: '12+', icon: Clock },
@@ -76,7 +75,7 @@ export const AboutSection: React.FC = () => {
           >
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl">
               <img 
-                src={aboutImage} 
+                src="/about-context.png" 
                 alt="Chemistry Laboratory" 
                 className="w-full h-auto object-contain"
                 referrerPolicy="no-referrer"

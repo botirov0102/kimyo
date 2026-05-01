@@ -10,10 +10,10 @@ export const Footer: React.FC = () => {
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-6 text-white">
               <div className="w-10 h-10 bg-brand-500 rounded-xl flex items-center justify-center font-bold text-xl">M</div>
-              <span className="text-2xl font-display font-bold">Mominjon Raximov</span>
+              <span className="text-2xl font-display font-bold">Raximov Moʻminjon</span>
             </div>
             <p className="max-w-md text-slate-400 mb-8 leading-relaxed">
-              Mominjon Raximov — Kimyoni oddiy va interaktiv usullar bilan o'rgatuvchi professional repetitor. 
+              Raximov Moʻminjon — Kimyoni oddiy va interaktiv usullar bilan o'rgatuvchi professional repetitor. 
             </p>
             <div className="flex gap-4">
               <a href="https://t.me/MS_kimyo1" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all shadow-lg">
@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-          <p>© 2024 Mominjon Raximov • Mominjon Raximov Ta'lim. 2012-yildan beri.</p>
+          <p>© 2024 Raximov Moʻminjon • Raximov Moʻminjon Ta'lim. 2012-yildan beri.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-slate-300">Maxfiylik siyosati</a>
             <a href="#" className="hover:text-slate-300">Foydalanish shartlari</a>
