@@ -16,35 +16,29 @@ async function startServer() {
   app.post('/api/book', async (req, res) => {
     const { name, phone, time } = req.body;
     
-    const botToken = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
+    const botToken = process.env.TELEGRAM_BOT_TOKEN || '7619898680:AAEE3NxQFk3CY1Pp2I7ffQklsQ2wEmlM_FQ';
+    const chatId = process.env.TELEGRAM_CHAT_ID || '6375561861';
 
-    if (!botToken || !chatId) {
-      console.warn('Telegram Bot Token or Chat ID not configured. Booking received:', { name, phone, time });
-      return res.status(200).json({ 
-        success: true, 
-        message: 'Booking received (Telegram not configured)',
-        data: { name, phone, time }
-      });
-    }
-
+    // Simple text message to avoid Markdown parsing errors with special characters in names/phones
     const message = `
-🧪 *New Chemistry Lesson Booking*!
-👤 *Name*: ${name}
-📞 *Phone*: ${phone}
-🕒 *Time*: ${time}
+🧪 Yangi dars band qilindi!
+------------------------
+👤 Ism: ${name}
+📞 Telefon: ${phone}
+🕒 Vaqt: ${time}
     `.trim();
 
     try {
+      console.log('Sending Telegram notification...');
       await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         chat_id: chatId,
-        text: message,
-        parse_mode: 'Markdown'
+        text: message
       });
+      console.log('Telegram notification sent successfully');
       res.json({ success: true });
     } catch (error: any) {
-      console.error('Telegram Error:', error.response?.data || error.message);
-      res.status(500).json({ success: false, error: 'Failed to send Telegram notification' });
+      console.error('Telegram Error details:', error.response?.data || error.message);
+      res.status(500).json({ success: false, error: 'Telegram xizmati bilan bog\'lanishda xatolik' });
     }
   });
 
