@@ -51,8 +51,7 @@ async function startServer() {
       await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         chat_id: chatId,
         text: message,
-       parse_mode: 'MarkdownV2'
-
+      parse_mode: 'Markdown'
       });
       res.json({ success: true });
     } catch (error: any) {
