@@ -28,18 +28,31 @@ async function startServer() {
       });
     }
 
-    const message = `
-🧪 *New Chemistry Lesson Booking*!
-👤 *Name*: ${name}
-📞 *Phone*: ${phone}
-🕒 *Time*: ${time}
-    `.trim();
+   const message = `
+🧪 *KIMYO DARSI UCHUN YANGI BUYURTMA*
+
+━━━━━━━━━━━━━━━━━━━
+👤 *Mijoz:* ${name}
+📞 *Telefon:* ${phone}
+🕒 *Tanlangan vaqt:* ${time}
+━━━━━━━━━━━━━━━━━━━
+
+📊 *Holat:* Yangi so‘rov
+⚡ *Ustuvorlik:* YUQORI
+
+📌 *Amal:* Mijoz bilan tez bog‘laning
+
+━━━━━━━━━━━━━━━━━━━
+🔔 * Booking System*
+`.trim();
+
 
     try {
       await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         chat_id: chatId,
         text: message,
-        parse_mode: 'Markdown'
+       parse_mode: 'MarkdownV2'
+
       });
       res.json({ success: true });
     } catch (error: any) {
